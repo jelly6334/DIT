@@ -7,3 +7,14 @@ print('choose an activity')
 print(f'{activity_choice[0]}')
 print(f'{activity_choice[1]}')
 print(f'{activity_choice[2]}')
+
+while True:
+     try:
+         activity_choice = int(input("Enter the number of your chosen activity: "))
+         if activity_choice in [1, 2, 3]:
+             break
+         else:
+             print("Invalid input. Please enter a number between 1 and 3.")
+     except ValueError:
+         print("Invalid input. Please enter a valid number.")
+
