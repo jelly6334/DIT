@@ -48,8 +48,8 @@ print(f'{transport[1]}')
 
 while True:
      try:
-         activity_choice = int(input("Enter the number of your chosen activity: "))
-         if activity_choice in [1, 2,]:
+         transport = int(input("Enter the number of your chosen activity: "))
+         if transport in [1, 2,]:
              break
          else:
              print("Invalid input. Please enter a number between 1 and 3.")
@@ -60,3 +60,22 @@ if transport == 1:
     transport = 80
 elif transport == 2:
     transport = 0
+
+
+
+meal_options = ["1.standerd meal", "2.vegetarian", "3.vegan"]
+
+print('select a meal')
+print(f'{meal_options[0]}')
+print(f'{meal_options[1]}')
+print(f'{meal_options[2]}')
+
+while True:
+     try:
+         meal_options = int(input("Enter the number of your chosen activity: "))
+         if meal_options in [1, 2, 3]:
+             break
+         else:
+             print("Invalid input. Please enter a number between 1 and 3.")
+     except ValueError:
+         print("Invalid input. Please enter a valid number.")
