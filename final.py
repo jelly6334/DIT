@@ -1,17 +1,22 @@
-name = input("what is your name: ")
-age = input("what is your age: ")
+name = input("enter your name pleas: ")
+ 
+while True:
+     try:
+         age = int(input(f"Hi {name}, please enter your age: "))
+         if age > 0:
+             break
+         else:
+             print("Invalid input. Age must be greater than 0.")
+     except ValueError:
+         print("Invalid input. Please enter a valid number for your age.")
 
 
+if age < 5:
+     print("Sorry, you must be 12 or older to participate.")
+if age > 17:
+     print("Sorry, you must be 17 or younger to participate.")
 
-
-
-
-
-
-
-
-
-
+#-------------------------------------------------------------------------------------------------------------
 
 activity_choice = ["1. Cultural immersion. This is for 5 days and is considered “easy” and costs $800. ", "2. Kayaking and pancakes. This is for 3 days and is considered “moderate” and costs $ 400. ", "3. Mountain biking. This is for 4 days and is considered “difficult” and costs $900. '"]
 
@@ -38,7 +43,7 @@ elif activity_choice == 3:
     activity_fee = 900
 
 
-
+#-------------------------------------------------------------------------------------------------------------
 
 transport = ["1.yes", "2.no"]
 
@@ -61,7 +66,7 @@ if transport == 1:
 elif transport == 2:
     transport = 0
 
-
+#-------------------------------------------------------------------------------------------------------------
 
 meal_options = ["1.standerd meal", "2.vegetarian", "3.vegan"]
 
@@ -79,3 +84,5 @@ while True:
              print("Invalid input. Please enter a number between 1 and 3.")
      except ValueError:
          print("Invalid input. Please enter a valid number.")
+
+#-------------------------------------------------------------------------------------------------------------
