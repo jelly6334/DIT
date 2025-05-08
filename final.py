@@ -50,34 +50,28 @@ print()
 
 #-------------------------------------------------------------------------------------------------------------
 
-transport = ["1.yes", "2.no"]
-
-print('campers can make there own way to the camp or take a shuttle for $80. will you be taking a shuttel or making your way there?')
-print(f'{transport[0]}')
-print(f'{transport[1]}')
-
-while True:
-     try:
-         transport = int(input("Enter the number of your chosen activity: "))
-         if transport in [1, 2]:
-             break
-         else:
-             print("Invalid input. Please enter a number between 1 and 2.")
-     except ValueError:
-         print("Invalid input. Please enter a valid number.")
-
-if transport == 1:
-    transport = 80
-elif transport == 2:
-    transport = 0
-
-print()
+def def_shuttle():
+    while True:
+        Shuttle = input('Do you require a shuttle bus for $80? (yes/no) (y/n): ')
+        if Shuttle in ['yes', 'y']:
+            shuttle_fee = 80
+            return shuttle_fee
+        elif Shuttle in ['no', 'n']:
+            shuttle_fee = 0
+            return shuttle_fee
+        else:
+            print('Invalid input. Please enter "yes" or "no".')
+            print()
 
 #-------------------------------------------------------------------------------------------------------------
 
-total_fee = activity_fee + transport
+shuttle_fee = def_shuttle()
+print(f'Your shuttle bus fee is: ${shuttle_fee}')
+
+total_fee = activity_fee + shuttle_fee
 
 #-------------------------------------------------------------------------------------------------------------
+
 meal_options = ["1.standerd meal", "2.vegetarian", "3.vegan"]
 
 print('select a meal')
