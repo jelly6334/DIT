@@ -1,5 +1,7 @@
 name = input("enter your name pleas: ")
  
+print()
+
 while True:
      try:
          age = int(input(f"Hi {name}, please enter your age: "))
@@ -15,6 +17,8 @@ if age < 5:
      print("Sorry, you must be 5 or older to participate.")
 if age > 17:
      print("Sorry, you must be 17 or younger to participate.")
+
+print()
 
 #-------------------------------------------------------------------------------------------------------------
 
@@ -42,6 +46,7 @@ elif activity_choice == 2:
 elif activity_choice == 3:
     activity_fee = 900
 
+print()
 
 #-------------------------------------------------------------------------------------------------------------
 
@@ -66,6 +71,8 @@ if transport == 1:
 elif transport == 2:
     transport = 0
 
+print()
+
 #-------------------------------------------------------------------------------------------------------------
 
 total_fee = activity_fee + transport
@@ -87,4 +94,5 @@ while True:
              print("Invalid input. Please enter a number between 1 and 3.")
      except ValueError:
          print("Invalid input. Please enter a valid number.") 
+print()         
 print(f'{name}, aged {age}, has chosen activity option "{activity_choice}", meal option: "{meal_options}". The total fee is ${total_fee}.')
