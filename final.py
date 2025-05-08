@@ -12,7 +12,7 @@ while True:
 
 
 if age < 5:
-     print("Sorry, you must be 12 or older to participate.")
+     print("Sorry, you must be 5 or older to participate.")
 if age > 17:
      print("Sorry, you must be 17 or younger to participate.")
 
@@ -54,10 +54,10 @@ print(f'{transport[1]}')
 while True:
      try:
          transport = int(input("Enter the number of your chosen activity: "))
-         if transport in [1, 2,]:
+         if transport in [1, 2]:
              break
          else:
-             print("Invalid input. Please enter a number between 1 and 3.")
+             print("Invalid input. Please enter a number between 1 and 2.")
      except ValueError:
          print("Invalid input. Please enter a valid number.")
 
@@ -68,6 +68,9 @@ elif transport == 2:
 
 #-------------------------------------------------------------------------------------------------------------
 
+total_fee = activity_fee + transport
+
+#-------------------------------------------------------------------------------------------------------------
 meal_options = ["1.standerd meal", "2.vegetarian", "3.vegan"]
 
 print('select a meal')
@@ -83,6 +86,5 @@ while True:
          else:
              print("Invalid input. Please enter a number between 1 and 3.")
      except ValueError:
-         print("Invalid input. Please enter a valid number.")
-
-#-------------------------------------------------------------------------------------------------------------
+         print("Invalid input. Please enter a valid number.") 
+print(f'{name}, aged {age}, has chosen activity option "{activity_choice}", meal option: "{meal_options}". The total fee is ${total_fee}.')
