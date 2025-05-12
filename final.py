@@ -65,13 +65,6 @@ def def_shuttle():
 
 #-------------------------------------------------------------------------------------------------------------
 
-shuttle_fee = def_shuttle()
-print(f'Your shuttle bus fee is: ${shuttle_fee}')
-
-total_fee = activity_fee + shuttle_fee
-
-#-------------------------------------------------------------------------------------------------------------
-
 meal_options = ["1.standerd meal", "2.vegetarian", "3.vegan"]
 
 print('select a meal')
@@ -87,6 +80,18 @@ while True:
          else:
              print("Invalid input. Please enter a number between 1 and 3.")
      except ValueError:
-         print("Invalid input. Please enter a valid number.") 
+         print("Invalid input. Please enter a valid number.")
+
+#-------------------------------------------------------------------------------------------------------------
+
+
+
+shuttle_fee = def_shuttle()
+print(f'Your shuttle bus fee is: ${shuttle_fee}')
+
+total_fee = activity_fee + shuttle_fee
+
+
+
 print()         
 print(f'{name}, aged {age}, has chosen activity option "{activity_choice}", meal option: "{meal_options}". The total fee is ${total_fee}.')
