@@ -1,6 +1,14 @@
 
-# name input
-name = input("enter your name pleas: ") 
+# name input with number error
+
+while True:
+    name = input("Enter your name please: ")
+    if name.replace(" ", "").isalpha():
+        break
+    else:
+        print("Invalid input. Please enter a name without numbers or symbols.")
+
+
 
 # blanck line
 print()
@@ -108,3 +116,4 @@ print()
  
 # final print out
 print(f'{name}, aged {age}, has chosen activity option "{activity_choice}", meal option: "{meal_options}". The total fee is ${total_fee}.')
+
