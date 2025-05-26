@@ -1,14 +1,11 @@
 
 # name input with number error
-
 while True:
     name = input("Enter your name please: ")
     if name.replace(" ", "").isalpha():
         break
     else:
         print("Invalid input. Please enter a name without numbers or symbols.")
-
-
 
 # blanck line
 print()
@@ -93,8 +90,8 @@ print(f'{meal_options[2]}')
 # meal validation
 while True:
      try:
-         meal_options = int(input("Enter the number of your chosen activity: "))
-         if meal_options in [1, 2, 3]:
+         meal_options = int(input("Enter the number of your chosen meal: "))
+         if meal_options in [1, 2, 3,]:
              break
          else:
              print("Invalid input. Please enter a number between 1 and 3.")
@@ -102,6 +99,9 @@ while True:
          print("Invalid input. Please enter a valid number.")
 
 #-------------------------------------------------------------------------------------------------------------
+
+# blanck line
+print()  
 
 # shuttle print out
 shuttle_fee = def_shuttle()
@@ -117,3 +117,8 @@ print()
 # final print out
 print(f'{name}, aged {age}, has chosen activity option "{activity_choice}", meal option: "{meal_options}". The total fee is ${total_fee}.')
 
+# blanck line
+print()     
+
+#camp confermation
+camp_confermation = input("is this correct if not pleas try again: ")

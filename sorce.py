@@ -70,3 +70,36 @@ name = input("enter your name pleas: ")
   #final print out 
  print(f'{name}, aged {age}, has chosen activity option "{activity_choice}", meal option: "{meal_option}".')
  print(f'{name}, aged {age}, has chosen activity option "{activity_choice}", meal option: "{meal_option}". The total fee is ${total_fee}.')
+
+
+
+# make the meal option work with names and numbers
+
+
+meal_options = ["1. standard meal", "2. vegetarian", "3. vegan"]
+meal_names = ["standard meal", "vegetarian", "vegan"]
+
+print('Select a meal:')
+print(f'{meal_options[0]}')
+print(f'{meal_options[1]}')
+print(f'{meal_options[2]}')
+
+# meal validation
+while True:
+    user_input = input("Enter the number or name of your chosen meal: ").strip().lower()
+    try:
+        # Try to convert input to number
+        choice = int(user_input)
+        if choice in [1, 2, 3]:
+            print(f"You selected: {meal_options[choice - 1]}")
+            break
+        else:
+            print("Invalid input. Please enter a number between 1 and 3.")
+    except ValueError:
+        # If not a number, check if it's a valid meal name
+        if user_input in meal_names:
+            index = meal_names.index(user_input)
+            print(f"You selected: {meal_options[index]}")
+            break
+        else:
+            print("Invalid input. Please enter a valid number or meal name.")
