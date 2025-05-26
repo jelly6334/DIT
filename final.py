@@ -120,5 +120,12 @@ print(f'{name}, aged {age}, has chosen activity option "{activity_choice}", meal
 # blanck line
 print()     
 
-#camp confermation
-camp_confermation = input("is this correct if not pleas try again: ")
+# Camp Confirmation
+camp_confirmation = input("is this corect use (yes/no) \n\nAns = ").strip().lower()
+
+if camp_confirmation == "yes":
+    print("\nOk great see you soon!")
+elif camp_confirmation == "no":
+    print("\nIf something is wrong with your choice's please start again")
+else:
+    print("\nInvalid input. Please answer with 'yes' or 'no'.")
